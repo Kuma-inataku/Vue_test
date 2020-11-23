@@ -1,18 +1,78 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
-  <ul id="example">
-    <li v-for="member in members" v-bind:key="member">
-      {{ member }}      
-    </li>
-  </ul>
-  
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="main.js"></script>
+<div id="app">
+    <input type="text" v-model="keyword">
+    <!-- <table> -->
+        <!-- <tr v-for="user in filteredUsers"> -->
+          <div class="aaa" v-for="user in filteredUsers">
+            <a href="#">
+            <img src="./top_image3.jpg" alt="">
+            <div>
+              <p v-text="user.id"></p>
+              <p v-text="user.name"></p>
+              <p v-text="user.email"></p>
+            </div>
+            </a>
+          </div>
+            <!-- <td v-text="user.id"></td>
+            <td v-text="user.name"></td>
+            <td v-text="user.email"></td>
+        </tr>
+    </table> -->
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
+<script>
+
+    new Vue({
+        el: '#app',
+        data: {
+            keyword: '',
+            users: [
+                {
+                    id: 1,
+                    name: '鈴木太郎',
+                    email: 'suzukitaro@example.com'
+                },
+                {
+                    id: 2,
+                    name: '佐藤二郎',
+                    email: 'satoujiro@example.com'
+                },
+                {
+                    id: 3,
+                    name: '田中三郎',
+                    email: 'tanakasaburo@example.com'
+                },
+                {
+                    id: 4,
+                    name: '山本四郎',
+                    email: 'yamamotoshiro@example.com'
+                },
+                {
+                    id: 5,
+                    name: '高橋五郎',
+                    email: 'takahashigoro@example.com'
+                },
+            ],
+            filteredUsers:[]
+        },
+        watch:{
+         keyword(val){
+             this.filteredUsers = [];
+             for(let i of this.users){
+              if (i.name.indexOf(val) !== -1){
+              this.filteredUsers.push(i)
+            }             }
+          }
+        }
+    });
+</script>
 </body>
 </html>
