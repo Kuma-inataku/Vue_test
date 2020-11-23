@@ -6,10 +6,12 @@
   <title>Document</title>
 </head>
 <body>
-  <div id="example">
-    <a v-bind:href="url">テックアカデミー</a>
-  </div>
-
+  <ul id="example">
+    <li v-for="member in members" v-bind:key="member">
+      {{ member }}      
+    </li>
+  </ul>
+  
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="main.js"></script>
 </body>

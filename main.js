@@ -1,6 +1,6 @@
 const app = new Vue({
   el: "#example",
   data:{
-    url:"https://techacademy.jp/",
-  },
+    members:["桃太郎","イヌ","サル","キジ"],
+    },
 });
