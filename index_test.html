@@ -6,36 +6,11 @@
   <title>Document</title>
 </head>
 <body>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Website</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr v-for="uders in users" :key="user.id">
-        <td>{{ user.name }}</td>
-        <td>{{ user.email }}</td>
-        <td>{{ user.website }}</td>
-      </tr>
-    </tbody>
-  </table>
+  <div id="example">
+    <a v-bind:href="url">テックアカデミー</a>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script>
-    new Vue({
-      el:"#app",
-      data:{
-        message:"Hello World"
-      },
-      created:function(){
-        this.message = "Hello Vue"
-          console.log("created")
-          console.log(this)
-      },
-    })
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>
