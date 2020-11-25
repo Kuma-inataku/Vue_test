@@ -1,0 +1,82 @@
+@media screen and (min-width: 900px) {
+	body {
+		width: 1200px;
+		margin-right: auto;
+		margin-left : auto;
+	}
+	img {
+		width: 450px;
+	}
+	table {
+		width: 1200px;
+		margin-right: auto;
+		margin-left : auto;
+		border-collapse: collapse;
+		text-align: left;
+		line-height: 1.5;
+		border: 1px solid #ccc;
+	}
+}
+@media screen and (max-width: 900px) {
+	body {
+		width: 600px;
+		margin-right: auto;
+		margin-left : auto;
+	}
+	img {
+		width: 300px;
+	}
+	table {
+		width: 550px;
+		margin-right: auto;
+		margin-left : auto;
+		border-collapse: collapse;
+		text-align: left;
+		line-height: 1.5;
+		border: 1px solid #ccc;
+	}
+}
+h1 {
+	text-align: center;
+	padding: 0.5em 0;	
+	color: #ccc;
+	background: #04162e;
+}
+table thead {
+	border-right: 1px solid #04162e;
+	border-left: 1px solid #04162e;
+	background: #04162e;
+}
+table thead th {
+	text-align: center;
+	padding: 10px;
+	font-weight: bold;
+	vertical-align: top;
+	color: #fff;
+}
+table tbody th {
+	padding: 10px;
+	font-weight: bold;
+	vertical-align: top;
+	border-bottom: 1px solid #04162e;
+	background: #efefef;
+}
+table td {
+	vertical-align: middle;
+	padding: 10px;
+	vertical-align: top;
+	border-bottom: 1px solid #04162e;
+}
+.id {
+	text-align: center;
+}
+#inputbox {
+	border:0;
+	padding:10px;
+	font-size:1.3em;
+	font-family:Arial, sans-serif;
+	color:#666;
+	border:solid 1px #ccc;
+	margin:0 0 20px;
+	width:300px;
+}
